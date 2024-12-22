@@ -19,3 +19,9 @@ if [ $DISK_USAGE -gt $DISK_THRESHOLD ]; then
 else
 	echo "Disk usage is normal: $DISK_USAGE" >> $LOG_FILE
 fi
+
+LAST_LOGIN=$( last | head -n 2)
+
+echo "Last logins occured $(date):" >> $LOG_FILE
+echo $LAST_LOGIN >> $LOG_FILE
+echo "--------------------" >> $LOG_FILE
