@@ -25,3 +25,5 @@ LAST_LOGIN=$( last | head -n 2)
 echo "Last logins occured $(date):" >> $LOG_FILE
 echo $LAST_LOGIN >> $LOG_FILE
 echo "--------------------" >> $LOG_FILE
+
+cat $LOG_FILE
